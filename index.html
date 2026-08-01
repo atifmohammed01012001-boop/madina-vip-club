@@ -90,6 +90,29 @@ document.getElementById("vipForm").addEventListener("submit", function(e) {
     document.getElementById("vipForm").reset();
 });
 </script>
+<script>
+document.getElementById("vipForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    var name = encodeURIComponent(document.getElementById("name").value);
+    var phone = encodeURIComponent(document.getElementById("phone").value);
+    var city = encodeURIComponent(document.getElementById("city").value);
+
+    var url = "https://docs.google.com/forms/d/e/1FAIpQLSfbM_e6avLqZljyWuy50prsIj9Jq5MEujVVcnnipoFOcJGjmQ/formResponse?usp=pp_url"
+        + "&entry.912133778=" + name
+        + "&entry.1127720680=" + phone
+        + "&entry.1536715738=" + city;
+
+    fetch(url, {
+        method: "POST",
+        mode: "no-cors"
+    });
+
+    alert("🎉 Welcome to Madina Perfumes VIP Club!");
+
+    document.getElementById("vipForm").reset();
+});
+</script>
 
 <div class="note">🔒 Your information is secure and will only be used for VIP benefits.</div>
 </div>
