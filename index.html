@@ -80,15 +80,12 @@ document.getElementById("vipForm").addEventListener("submit", function(e) {
         + "&entry.1127720680=" + phone
         + "&entry.1536715738=" + city;
 
-    fetch(url, {
-        method: "POST",
-        mode: "no-cors"
-    });
+    window.open(url, "_blank");
 
-    alert("🎉 Welcome to Madina Perfumes VIP Club!");
-
+setTimeout(function () {
+    alert("🎉 Thank you for joining Madina Perfumes VIP Club!");
     document.getElementById("vipForm").reset();
-});
+}, 1000);
 </script>
 
 <div class="note">🔒 Your information is secure and will only be used for VIP benefits.</div>
