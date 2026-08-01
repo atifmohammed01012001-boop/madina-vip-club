@@ -1,123 +1,73 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Madina Perfumes VIP Club</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 body{
 font-family:Arial,sans-serif;
-background:linear-gradient(135deg,#090909,#1a1a1a);
-color:#f7f2e8;
-display:flex;
-justify-content:center;
-align-items:center;
-min-height:100vh;
-padding:30px;
-}
+background:linear-gradient(135deg,#080808,#151515);
+color:#f6e8c6;
+display:flex;justify-content:center;align-items:center;
+min-height:100vh;padding:30px}
 .card{
-width:100%;
-max-width:720px;
-background:rgba(18,18,18,.95);
-border:1px solid #b78b3f;
+width:100%;max-width:760px;
+background:#111;
+border:1px solid #9b6d2f;
 border-radius:22px;
 padding:40px;
-box-shadow:0 0 40px rgba(183,139,63,.25);
-}
-h1{
-text-align:center;
-font-size:48px;
-letter-spacing:3px;
-color:#d6a34d;
-margin-bottom:10px;
-}
-h2{
-text-align:center;
-margin-bottom:10px;
-}
-.tagline{
-text-align:center;
-color:#d5c7aa;
-margin-bottom:30px;
-}
-.grid{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:15px;
-margin-bottom:30px;
-}
-.box{
-padding:15px;
-border:1px solid #444;
-border-radius:12px;
-text-align:center;
-}
-label{
-display:block;
-margin:14px 0 6px;
-font-weight:bold;
-}
+box-shadow:0 0 40px rgba(212,170,74,.18)}
+.logo{display:block;margin:0 auto 18px;width:170px;max-width:55%}
+h1{font-size:56px;text-align:center;letter-spacing:4px;color:#f7f0e3}
+.tag{color:#d8b56a;text-align:center;font-size:30px;font-weight:bold}
+.sub{text-align:center;color:#ddd;margin:14px 0 28px;font-size:22px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:30px}
+.item{border:1px solid #8b6b2b;border-radius:14px;padding:18px;color:#f5e7c0;text-align:center}
+label{display:block;margin:14px 0 8px;font-weight:bold;color:#e8c56d}
 input{
-width:100%;
-padding:14px;
-background:#111;
-border:1px solid #555;
-border-radius:10px;
-color:white;
-}
+width:100%;padding:16px;background:#1b1b1b;color:#fff;
+border:1px solid #555;border-radius:10px;font-size:16px}
 button{
-margin-top:25px;
-width:100%;
-padding:16px;
-border:none;
-border-radius:30px;
-background:#d6a34d;
-font-size:18px;
-font-weight:bold;
-cursor:pointer;
-}
-.note{
-text-align:center;
-color:#9d9d9d;
-margin-top:18px;
-font-size:14px;
-}
+width:100%;margin-top:24px;padding:18px;border:none;border-radius:40px;
+background:linear-gradient(90deg,#c8952f,#f0d07d);
+font-size:22px;font-weight:bold;cursor:pointer}
+.note{text-align:center;color:#aaa;margin-top:18px}
 @media(max-width:700px){
 .grid{grid-template-columns:1fr}
-h1{font-size:38px}
-.card{padding:25px}
+h1{font-size:42px}.tag{font-size:24px}.sub{font-size:18px}
+.card{padding:22px}
 }
 </style>
 </head>
 <body>
 <div class="card">
-<h1>MADINA PERFUMES</h1>
-<h2>VIP CLUB</h2>
-<p class="tagline">Experience the Art of Luxury Fragrance</p>
+<img src="logo.png" class="logo" alt="Madina Perfumes Logo">
+<h1>VIP CLUB</h1>
+<div class="sub">Experience the Art of Luxury Fragrance</div>
 
 <div class="grid">
-<div class="box">✨ Early access to new launches</div>
-<div class="box">🎁 VIP-only offers</div>
-<div class="box">📱 Exclusive WhatsApp updates</div>
-<div class="box">💎 Member-only surprises</div>
+<div class="item">👑 Early access to new launches</div>
+<div class="item">🎁 VIP-only offers</div>
+<div class="item">💬 Exclusive WhatsApp updates</div>
+<div class="item">💎 Member-only surprises</div>
 </div>
 
-<form onsubmit="event.preventDefault();alert('Thank you for joining Madina Perfumes VIP Club!');">
+<form>
 <label>Full Name *</label>
-<input type="text" required placeholder="Enter your full name">
+<input type="text" placeholder="Enter your full name" required>
 
 <label>WhatsApp Number *</label>
-<input type="tel" required placeholder="Enter your WhatsApp number">
+<input type="tel" placeholder="Enter your WhatsApp number" required>
 
 <label>City (Optional)</label>
 <input type="text" placeholder="Your city">
 
-<button>JOIN THE VIP CLUB</button>
+<button type="submit">JOIN THE VIP CLUB →</button>
 </form>
 
-<p class="note">🔒 Your information is secure and will only be used for VIP benefits.</p>
+<div class="note">🔒 Your information is secure and will only be used for VIP benefits.</div>
 </div>
 </body>
 </html>
