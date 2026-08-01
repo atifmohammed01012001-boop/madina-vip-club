@@ -1,33 +1,123 @@
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>Madina Perfumes VIP Club</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+font-family:Arial,sans-serif;
+background:linear-gradient(135deg,#090909,#1a1a1a);
+color:#f7f2e8;
+display:flex;
+justify-content:center;
+align-items:center;
+min-height:100vh;
+padding:30px;
+}
+.card{
+width:100%;
+max-width:720px;
+background:rgba(18,18,18,.95);
+border:1px solid #b78b3f;
+border-radius:22px;
+padding:40px;
+box-shadow:0 0 40px rgba(183,139,63,.25);
+}
+h1{
+text-align:center;
+font-size:48px;
+letter-spacing:3px;
+color:#d6a34d;
+margin-bottom:10px;
+}
+h2{
+text-align:center;
+margin-bottom:10px;
+}
+.tagline{
+text-align:center;
+color:#d5c7aa;
+margin-bottom:30px;
+}
+.grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:15px;
+margin-bottom:30px;
+}
+.box{
+padding:15px;
+border:1px solid #444;
+border-radius:12px;
+text-align:center;
+}
+label{
+display:block;
+margin:14px 0 6px;
+font-weight:bold;
+}
+input{
+width:100%;
+padding:14px;
+background:#111;
+border:1px solid #555;
+border-radius:10px;
+color:white;
+}
+button{
+margin-top:25px;
+width:100%;
+padding:16px;
+border:none;
+border-radius:30px;
+background:#d6a34d;
+font-size:18px;
+font-weight:bold;
+cursor:pointer;
+}
+.note{
+text-align:center;
+color:#9d9d9d;
+margin-top:18px;
+font-size:14px;
+}
+@media(max-width:700px){
+.grid{grid-template-columns:1fr}
+h1{font-size:38px}
+.card{padding:25px}
+}
+</style>
 </head>
-<body style="font-family:Arial;background:#f8f5f0;text-align:center;padding:40px;">
-
-<h1>🌹 MADINA PERFUMES</h1>
+<body>
+<div class="card">
+<h1>MADINA PERFUMES</h1>
 <h2>VIP CLUB</h2>
+<p class="tagline">Experience the Art of Luxury Fragrance</p>
 
-<p>Become a VIP member and enjoy exclusive benefits.</p>
+<div class="grid">
+<div class="box">✨ Early access to new launches</div>
+<div class="box">🎁 VIP-only offers</div>
+<div class="box">📱 Exclusive WhatsApp updates</div>
+<div class="box">💎 Member-only surprises</div>
+</div>
 
-<ul style="list-style:none;padding:0;font-size:20px;">
-<li>✨ Early access to new launches</li>
-<li>🎁 VIP-only rewards</li>
-<li>📱 Exclusive WhatsApp updates</li>
-</ul>
+<form onsubmit="event.preventDefault();alert('Thank you for joining Madina Perfumes VIP Club!');">
+<label>Full Name *</label>
+<input type="text" required placeholder="Enter your full name">
 
-<h3>Join Now</h3>
+<label>WhatsApp Number *</label>
+<input type="tel" required placeholder="Enter your WhatsApp number">
 
-<form>
-<input type="text" placeholder="Your Name" style="padding:12px;width:300px;"><br><br>
+<label>City (Optional)</label>
+<input type="text" placeholder="Your city">
 
-<input type="tel" placeholder="WhatsApp Number" style="padding:12px;width:300px;"><br><br>
-
-<button style="padding:15px 40px;background:black;color:white;border:none;border-radius:30px;font-size:18px;">
-Join VIP Club
-</button>
-
+<button>JOIN THE VIP CLUB</button>
 </form>
 
+<p class="note">🔒 Your information is secure and will only be used for VIP benefits.</p>
+</div>
 </body>
 </html>
