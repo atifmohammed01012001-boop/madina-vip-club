@@ -68,26 +68,33 @@ h1{font-size:42px}.tag{font-size:24px}.sub{font-size:18px}
 </form>
 
 <script>
-document.getElementById("vipForm").addEventListener("submit", function(e) {
+document.getElementById("vipForm").addEventListener("submit", async function(e) {
     e.preventDefault();
 
-    var name = encodeURIComponent(document.getElementById("name").value);
-    var phone = encodeURIComponent(document.getElementById("phone").value);
-    var city = encodeURIComponent(document.getElementById("city").value);
+    const data = {
+        name: document.getElementById("name").value,
+        phone: document.getElementById("phone").value,
+        city: document.getElementById("city").value
+    };
 
-    var url = "https://docs.google.com/forms/d/e/1FAIpQLSfbM_e6avLqZljyWuy50prsIj9Jq5MEujVVcnnipoFOcJGjmQ/formResponse?usp=pp_url"
-        + "&entry.912133778=" + name
-        + "&entry.1127720680=" + phone
-        + "&entry.1536715738=" + city;
+    try {
+        const response = await fetch("https://script.google.com/macros/s/AKfycby99OLTl0Td2zwiIqYNnSqe8lGKhD0KGIBOqjMOTv_axnWq5SB5c4yICVw4L_CgpqWPgA/exec", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(data)
+        });
 
-    window.open(url, "_blank");
+        alert("🎉 Welcome to Madina Perfumes VIP Club!");
+        document.getElementById("vipForm").reset();
 
-setTimeout(function () {
-    alert("🎉 Thank you for joining Madina Perfumes VIP Club!");
-    document.getElementById("vipForm").reset();
-}, 1000);
+    } catch (error) {
+        alert("❌ Submission failed.");
+        console.log(error);
+    }
+});
 </script>
-
 <div class="note">🔒 Your information is secure and will only be used for VIP benefits.</div>
 </div>
 </body>
