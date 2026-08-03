@@ -169,18 +169,21 @@ await fetch(
 
 await Swal.fire({
     icon: "success",
-    title: "Welcome!",
-    html: "<b>You're now a member of the Madina Perfumes VIP Club.</b><br><br>Thank you for joining us.",
-    background: "#111",
-    color: "#fff",
-    confirmButtonColor: "#C8A86B",
-    confirmButtonText: "Continue"
+    title: "Welcome to Madina Perfumes VIP Club",
+    html: `
+    <div style="line-height:1.8;font-size:16px;">
+      <strong>We are thrilled to welcome you to the Madina Perfumes VIP Club.</strong><br><br>
+      Your registration has been successfully received.<br><br>
+      As one of our valued members, you'll enjoy exclusive access to our latest fragrance launches, premium offers, and members-only experiences.<br><br>
+      <strong>Thank you for joining us.</strong>
+    </div>
+    `,
+    background:"#111",
+    color:"#fff",
+    confirmButtonColor:"#C8A86B",
+    confirmButtonText:"Close",
+    allowOutsideClick:false
 });
-
-window.open(
-"https://wa.me/"+data.phone+"?text="+encodeURIComponent("Welcome to Madina Perfumes VIP Club 🌹 Thank you for joining us!"),
-"_blank"
-);
 
 document.getElementById("vipForm").reset();
 
