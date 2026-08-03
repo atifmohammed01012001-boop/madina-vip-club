@@ -159,7 +159,15 @@ await fetch(
   }
 );
 
-alert("Welcome to Madina Perfumes VIP Club!");
+await Swal.fire({
+    icon: "success",
+    title: "Welcome!",
+    html: "<b>You're now a member of the Madina Perfumes VIP Club.</b><br><br>Thank you for joining us.",
+    background: "#111",
+    color: "#fff",
+    confirmButtonColor: "#C8A86B",
+    confirmButtonText: "Continue"
+});
 
 window.open(
 "https://wa.me/"+data.phone+"?text="+encodeURIComponent("Welcome to Madina Perfumes VIP Club 🌹 Thank you for joining us!"),
@@ -179,6 +187,9 @@ alert("Something went wrong. Please try again.");
 });
 
 </script>
+src="https://cdn.jsdelivr.net/npm/sweetalert2@11">
+</script>
 
+<script>  
 </body>
 </html>
