@@ -151,11 +151,13 @@ formData.append("entry.1927841658", data.phone);
 formData.append("entry.1566345613", data.city);
 
 await fetch(
-"https://docs.google.com/forms/d/e/1FAIpQLSdB7b_5AsQTYPGsjAWsFsx_17ihSy_0o3_HADvFOcPvjNyAYw/formResponse",
+"https://script.google.com/macros/s/AKfycbxIVuFW_a_YDZUNQEVjQu98wlwWiou3f3Y8f5NgbfG9-O0skrUOoGcJEhvJPS5W6yziqQ/exec",
 {
     method: "POST",
-    mode: "no-cors",
-    body: formData
+    headers: {
+        "Content-Type": "application/json"
+    },
+    body: JSON.stringify(data)
 });
 
 alert("Welcome to Madina Perfumes VIP Club!");
